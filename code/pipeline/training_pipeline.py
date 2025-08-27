@@ -19,10 +19,11 @@ if __name__ == "__main__":
         )
     data_processor.process()
 
-    # # model training 
-    # trainer = ModelTraining(
-    #     train_path = PROCESSED_TRAIN_DATA_PATH,
-    #     test_path = PROCESSED_TEST_DATA_PATH,
-    #     model_output_path = MODEL_OUTPUT_PATH
-    #     )
-    # trainer.run()
+    # model training 
+    trainer = ModelTraining(
+        train_path = PROCESSED_TRAIN_DATA_PATH,
+        test_path = PROCESSED_TEST_DATA_PATH,
+        model_output_path = MODEL_OUTPUT_PATH,
+        val_path = PROCESSED_VAL_DATA_PATH
+        )
+    trainer.run()
